@@ -12,3 +12,10 @@ let productos = [
     
 ]
 console.log(productos)
+
+//Como recorrer un arreglo con js
+//1. Tener un arreglo
+productos.forEach(function(producto){
+    console.log(producto.nombre);
+    console.log(producto.precio);
+})
