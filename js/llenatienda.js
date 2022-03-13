@@ -1,14 +1,14 @@
 let productos = [
-    { foto: 'img/CamisaNegra.jpg',nombre:"Camisa", precio:34000,descripcion:"Camisa de color negro de The Flash "},
-    { foto: 'img/CamisaNiño.jpg',nombre:"Camisa", precio:45000,descripcion:"Camisa de color rojo de The Flash"},
-    { foto: 'img/BusoLogo.jpg',nombre:"Camibuso" , precio:45000,descripcion:"Camibuso de color rojo con el logo de The Flash"},
-    { foto: 'img/Sudadera.png',nombre:"Sudadera", precio:55000,descripcion:"Sudadera de color rojo oscuro con cierre integrado de The Flash"},
-    { foto: 'img/FunkoPopFlash.jpg',nombre:"Funko Pop", precio:30000,descripcion:"FunkoPop, muñeco coleccionable de The Flash"},
-    { foto: 'img/Coleccionable.jpg',nombre:"Coleccionable", precio:30000,descripcion:"Muñeco coleccionable Kid Flash"},
-    { foto: 'img/flashjunior.jpg',nombre:"Disfraz", precio:23000,descripcion:"Disfraz de The Flash para niño"},
-    { foto: 'img/Disfraz2.jpg',nombre:"Disfraz", precio:56000,descripcion:"Disfraz de The Flash para mujer adulta"},
-    { foto: 'img/PijamaFlash.png',nombre:"Pijama", precio:57000,descripcion:"Pijama de The Flash para hombre"},
-    { foto: 'img/AnillosFlash.png',nombre:"Anillos", precio:60000,descripcion:"Anillos de buena calidad The Flash"},
+    { foto: 'img/productos/CamisaNegra.jpg',nombre:"Camisa", precio:34000,descripcion:"Camisa de color negro de The Flash "},
+    { foto: 'img/productos/CamisaNiño.jpg',nombre:"Camisa", precio:45000,descripcion:"Camisa de color rojo de The Flash"},
+    { foto: 'img/productos/BusoLogo.jpg',nombre:"Camibuso" , precio:45000,descripcion:"Camibuso de color rojo con el logo de The Flash"},
+    { foto: 'img/productos/Sudadera.png',nombre:"Sudadera", precio:55000,descripcion:"Sudadera de color rojo oscuro con cierre integrado de The Flash"},
+    { foto: 'img/productos/FunkoPopFlash.jpg',nombre:"Funko Pop", precio:30000,descripcion:"FunkoPop, muñeco coleccionable de The Flash"},
+    { foto: 'img/productos/Coleccionable.jpg',nombre:"Coleccionable", precio:30000,descripcion:"Muñeco coleccionable Kid Flash"},
+    { foto: 'img/productos/flashjunior.jpg',nombre:"Disfraz", precio:23000,descripcion:"Disfraz de The Flash para niño"},
+    { foto: 'img/productos/Disfraz2.jpg',nombre:"Disfraz", precio:56000,descripcion:"Disfraz de The Flash para mujer adulta"},
+    { foto: 'img/productos/PijamaFlash.png',nombre:"Pijama", precio:57000,descripcion:"Pijama de The Flash para hombre"},
+    { foto: 'img/productos/AnillosFlash.png',nombre:"Anillos", precio:60000,descripcion:"Anillos de buena calidad The Flash"},
     
 ]
 
