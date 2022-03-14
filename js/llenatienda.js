@@ -30,10 +30,16 @@ productos.forEach(function(producto){
     let tarjeta = document.createElement("div")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
+    tarjeta.style.width="100%"
+
     //img con la clase card-img-top
     let foto=document.createElement("img")
     foto.classList.add("card-img-top") 
+    foto.classList.add("alaing-center")
     foto.src=producto.foto
+    foto.style.height="100%"
+    
+    
     //nombre
     let nombre = document.createElement("h4")
     nombre.classList.add("text-center")
@@ -47,12 +53,16 @@ productos.forEach(function(producto){
     descripcion.classList.add("text-justify")
     descripcion.textContent=producto.descripcion
     
+    let boton = document.createElement("button")
+    boton.classList.add("text-center")
+    boton.textContent="Comprar"
 
     //*** PADRES E HIJOS
     tarjeta.appendChild(foto)
     tarjeta.appendChild(nombre)
     tarjeta.appendChild(precio)
     tarjeta.appendChild(descripcion)
+    tarjeta.appendChild(boton)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 })

@@ -5,7 +5,7 @@ let personajes=[
     {foto:'img/personajes/caitlin.jpg',nombre:'Caitilin Snow',eleccion:'Heroe',descripcion:'Compañera y medica responsable de la salud de Flash'},
     {foto:'img/personajes/Thawne.jpg',nombre:'Eobard Thawne',eleccion:'Villano',descripcion:'Archi-enemigo y tutor de Flash'},
     {foto:'img/personajes/Zoom.jpg',nombre:'Zoom',eleccion:'Villano',descripcion:'Hunter Zolomon, Enemigo por eleccion de Flash'},
-    {foto:'img/personajes/Joe.jpg',nombre:'Joe West',eleccion:'Heroe',descripcion:''},
+    {foto:'img/personajes/Joe.jpg',nombre:'Joe West',eleccion:'Heroe',descripcion:'Padre adoptivo de Barry, padre legitimo de Iris West'},
     {foto:'img/personajes/iris.jpg',nombre:'Iris West',eleccion:'Heroe',descripcion:'Acompañante y esposa de Barry Allen'},
     
 ]
@@ -13,7 +13,7 @@ let personajes=[
 console.log(personajes)
 
 let fila = document.getElementById("filaPersonajes")
-personajes.forEach(function(personaje){
+    personajes.forEach(function(personaje){
     console.log(personaje.nombre);
     console.log(personaje.eleccion)
 
