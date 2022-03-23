@@ -69,8 +69,8 @@ console.log(productos);
 //* Crear variable para almacenar la base sobre la cual voy a pintar
 let fila = document.getElementById("fila");
 productos.forEach(function (producto) {
-  console.log(producto.precio);
-  console.log(producto.descripcion);
+  // console.log(producto.precio);
+  // console.log(producto.descripcion);
 
   //**pintando etiquetas
   //div con la clase col
@@ -85,7 +85,7 @@ productos.forEach(function (producto) {
   //img con la clase card-img-top
   let foto = document.createElement("img");
   foto.classList.add("card-img-top");
-  foto.classList.add("alaing-center");
+  // foto.classList.add("alaing-center");
   foto.src = producto.foto;
   foto.style.height = "100%";
 
@@ -103,7 +103,7 @@ productos.forEach(function (producto) {
   descripcion.textContent = producto.descripcion;
 
   let boton = document.createElement("button");
-  boton.classList.add("text-center", "btn--hover");
+  boton.classList.add("btn","text-center", "btn--hover","btn-warning","w-40","d-block","mx-auto","mt-4");
   boton.textContent = "Comprar";
 
   //*** PADRES E HIJOS
@@ -118,3 +118,19 @@ productos.forEach(function (producto) {
 
 const col = document.querySelector(".col");
 
+//Rutina para ampliar informacion del producto
+let filaContenedora=document.getElementById("fila")
+filaContenedora.addEventListener("click",function(evento){
+ if(evento.target.classList.contains("btn")){
+  console.log(evento.target.parentElement.querySelector("h4").textContent);
+  console.log(evento.target.parentElement.querySelector("img").src);
+
+  let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+  modalinfo.show()
+  let fotoinfo = document.getElementById("fotoInfo")
+  fotoinfo.src=evento.target.parentElement.querySelector("img").src
+
+  let tituloInfo=document.getElementById("tituloInfo")
+  tituloInfo.textContent=evento.target.parentElement.querySelector("h4").textContent
+ }
+})
