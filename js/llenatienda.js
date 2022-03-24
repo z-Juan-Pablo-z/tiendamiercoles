@@ -110,7 +110,6 @@ productos.forEach(function (producto) {
   tarjeta.appendChild(foto);
   tarjeta.appendChild(nombre);
   tarjeta.appendChild(precio);
-  tarjeta.appendChild(descripcion);
   tarjeta.appendChild(boton);
   columna.appendChild(tarjeta);
   fila.appendChild(columna);
@@ -125,12 +124,17 @@ filaContenedora.addEventListener("click",function(evento){
   console.log(evento.target.parentElement.querySelector("h4").textContent);
   console.log(evento.target.parentElement.querySelector("img").src);
 
-  let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
-  modalinfo.show()
+
   let fotoinfo = document.getElementById("fotoInfo")
-  fotoinfo.src=evento.target.parentElement.querySelector("img").src
+  fotoinfo.src=(evento.target.parentElement.querySelector("img").src)
 
   let tituloInfo=document.getElementById("tituloInfo")
-  tituloInfo.textContent=evento.target.parentElement.querySelector("h4").textContent
+  tituloInfo.textContent=(evento.target.parentElement.querySelector("h4").textContent)
+
+  let descripcionInfo = document.getElementById("descripcionInfo")
+  descripcionInfo.textContent=(evento.target.parentElement.querySelector("p").textContent)
+
+  let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+  modalinfo.show()
  }
 })

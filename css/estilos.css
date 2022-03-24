@@ -40,7 +40,7 @@
     margin-bottom: 2rem;
 }
 .card{
-    transition: all ease .5s;
+    transition: all ease .6s;
     padding: 1rem;
 }
 .card:hover{
@@ -48,7 +48,7 @@
 }
 .btn--hover{
     opacity: 0;
-    transition: all ease .5s;
+    transition: all ease .6s;
 }
 .card:hover > .btn--hover{
     opacity: 1;
