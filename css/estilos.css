@@ -40,7 +40,7 @@
     margin-bottom: 2rem;
 }
 .card{
-    transition: all ease .6s;
+    transition: all ease .5s;
     padding: 1rem;
 }
 .card:hover{
@@ -48,8 +48,12 @@
 }
 .btn--hover{
     opacity: 0;
-    transition: all ease .6s;
+    transition: all ease .5s;
 }
 .card:hover > .btn--hover{
     opacity: 1;
 }
+
+/*.icono{
+    font-size: 30px;
+}*/
