@@ -17,6 +17,7 @@ filaContenedora.addEventListener("click",function(evento){
       producto=ampliarInformacionProducto(evento)
       //console.log(producto);
       modalinfo.show();
+      reiniciar()
       }
 })
 
@@ -43,6 +44,8 @@ botonAddCarrito.addEventListener("click",function(){
     modalinfo.hide()
     limpiarCarrito.classList.remove("invisible")
     subtotal(1)
+    
+    
 
     
     
@@ -123,4 +126,7 @@ function subtotal(validar){
     })
 }
 
-
+function reiniciar(){
+    let cantidadProducto = document.getElementById("cantidadProducto")
+    cantidadProducto.value="1"
+}
