@@ -25,8 +25,8 @@ filaContenedora.addEventListener("click",function(evento){
 let carrito=[];
 let botonAddCarrito = document.getElementById("botonAddCarrito")
 let capsula=document.getElementById("capsula")
-let cantidad = document.getElementById("cantidadProducto").value;
 botonAddCarrito.addEventListener("click",function(){
+    let cantidad = document.getElementById("cantidadProducto").value
     //Debo capturar la cantidad y agregarla al producto 
     producto.cantidad=cantidad
     //pintar la capsula en el carrito
@@ -42,6 +42,7 @@ botonAddCarrito.addEventListener("click",function(){
     capsula.textContent=suma
     modalinfo.hide()
     limpiarCarrito.classList.remove("invisible")
+    subtotal(1)
 
     
     
@@ -50,11 +51,11 @@ botonAddCarrito.addEventListener("click",function(){
 //rutina para limpiar
 let limpiarCarrito = document.getElementById("limpiarCarrito")
 limpiarCarrito.addEventListener("click",function(){
+    subtotal(0)
     capsula.textContent=0
     capsula.classList.add("invisible")
     limpiarCarrito.classList.add("invisible")
-    carrito=[];
-    
+    carrito=[];    
 })
 
 //rutina para ver el carrito 
@@ -90,6 +91,8 @@ verCarrito.addEventListener("click",function(){
         let cantidad = document.createElement("p")
         cantidad.textContent=producto.cantidad
 
+       
+
         columna1.appendChild(foto)
         columna2.appendChild(nombre)
         columna2.appendChild(precio)
@@ -105,3 +108,19 @@ verCarrito.addEventListener("click",function(){
 })
 
 /*Hacer un subtotal para la muestra del valor*/
+let mostrarSubtotal =document.getElementById("mostrarSubtotal")
+
+function subtotal(validar){
+    let total=0
+    carrito.forEach(function(producto){
+        if(validar==1){
+            total=total+(Number(producto.cantidad)*Number(producto.precio))
+            mostrarSubtotal.textContent=total
+        }else{
+            total=0
+            mostrarSubtotal.textContent=""
+        }
+    })
+}
+
+
