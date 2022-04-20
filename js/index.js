@@ -8,8 +8,8 @@ let mostradores=[
 
 let fila=document.getElementById("filaMostrador")
     mostradores.forEach(function(mostrador){
-        console.log(mostrador.texto);
-        console.log(mostrador.titulo);
+        // console.log(mostrador.texto);
+        // console.log(mostrador.titulo);
         
 
         let columna = document.createElement("div")

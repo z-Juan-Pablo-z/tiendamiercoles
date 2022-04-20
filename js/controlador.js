@@ -119,6 +119,7 @@ function subtotal(validar){
         if(validar==1){
             total=total+(Number(producto.cantidad)*Number(producto.precio))
             mostrarSubtotal.textContent=total
+            console.log(total);
         }else{
             total=0
             mostrarSubtotal.textContent=""

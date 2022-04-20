@@ -64,6 +64,19 @@
     </nav>
   </header>
   <main>
+    <section>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100" id="btnRegistro">Registro</button>
+      </form>
+    </section>
     <div class="position-relative">
       <div class="titulo__flash">
         <h2>The Flash</h2>
@@ -117,6 +130,7 @@
       </div>
     </div>
   </section>
+  
   <h1 style="text-align: center;">Razones para disfrutar The Flash</h1>
   <section>
     <div class="container" id="mostrar">
@@ -146,6 +160,8 @@
     crossorigin="anonymous"></script>
 
   <script src="js/index.js"></script>
+  <script src="js/firebase.js" type="module"></script>
+  <script src="js/registro.js" type="module"></script>
 
 
 </body>
