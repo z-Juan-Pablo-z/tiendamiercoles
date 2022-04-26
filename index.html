@@ -25,12 +25,6 @@
         </button>
         <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="tienda.html">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="personajes.html">Personajes</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -49,7 +43,19 @@
               </ul>
             </li>
             <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="personajes.html">Personajes</a>
+            </li>
+            
+            <li class="nav-item">
               <a class="nav-link disabled"></a>
+            </li>
+            <li>
+              <!-- <a class="nav-link" href="personal.html"> Informacion Personal</a> -->
+              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Formulario
+              </a>
             </li>
             <li>
               <!-- <a class="nav-link" href="personal.html"> Informacion Personal</a> -->
@@ -58,6 +64,7 @@
                 Informacion Personal
               </a>
             </li>
+            
           </ul>
         </div>
       </div>
@@ -65,17 +72,26 @@
   </header>
   <main>
     <section>
-      <form>
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" id="email">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Password</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-primary w-100" id="btnRegistro">Registro</button>
-      </form>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <button type="submit" class="btn btn-primary w-100" id="btnRegistro">Registro</button>
+        </form>  
+      </div>
+    </div>
+      
     </section>
     <div class="position-relative">
       <div class="titulo__flash">
