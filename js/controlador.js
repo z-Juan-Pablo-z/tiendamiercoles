@@ -31,6 +31,8 @@ botonAddCarrito.addEventListener("click",function(){
     //Debo capturar la cantidad y agregarla al producto 
     producto.cantidad=cantidad
     //pintar la capsula en el carrito
+    producto.subtotal=producto.cantidad*producto.precio
+    
     carrito.push(producto);
     console.log(carrito);
     //pintar la capsula en ele carrito 
@@ -43,7 +45,8 @@ botonAddCarrito.addEventListener("click",function(){
     capsula.textContent=suma
     modalinfo.hide()
     limpiarCarrito.classList.remove("invisible")
-    subtotal(1)
+
+    Total(1)
     
     
 
@@ -54,7 +57,7 @@ botonAddCarrito.addEventListener("click",function(){
 //rutina para limpiar
 let limpiarCarrito = document.getElementById("limpiarCarrito")
 limpiarCarrito.addEventListener("click",function(){
-    subtotal(0)
+    Total(0)
     capsula.textContent=0
     capsula.classList.add("invisible")
     limpiarCarrito.classList.add("invisible")
@@ -66,6 +69,7 @@ let verCarrito = document.getElementById("verCarrito")
 let base=document.getElementById("baseCarro")
 
 verCarrito.addEventListener("click",function(){
+    
     //recorrer el carrito y pintar los productos (Traversing)
     base.innerHTML=""
     carrito.forEach(function(producto){
@@ -94,6 +98,11 @@ verCarrito.addEventListener("click",function(){
         let cantidad = document.createElement("p")
         cantidad.textContent=producto.cantidad
 
+        let subtotalProducto = document.createElement("h5")
+        subtotalProducto.textContent="Subtotal: "+producto.subtotal
+        subtotalProducto.classList.add("text-center")
+        
+
        
 
         columna1.appendChild(foto)
@@ -101,6 +110,7 @@ verCarrito.addEventListener("click",function(){
         columna2.appendChild(precio)
         columna2.appendChild(descripcion)
         columna2.appendChild(cantidad)
+        columna2.appendChild(subtotalProducto)
         fila.appendChild(columna1)
         fila.appendChild(columna2)
         base.appendChild(fila)
@@ -111,18 +121,16 @@ verCarrito.addEventListener("click",function(){
 })
 
 /*Hacer un subtotal para la muestra del valor*/
-let mostrarSubtotal =document.getElementById("mostrarSubtotal")
-
-function subtotal(validar){
-    let total=0
+let mostrarTotal =document.getElementById("mostrarTotal")
+let total=0
+function Total(validar){
     carrito.forEach(function(producto){
         if(validar==1){
-            total=total+(Number(producto.cantidad)*Number(producto.precio))
-            mostrarSubtotal.textContent=total
-            console.log(total);
+            total=total+producto.subtotal
+            mostrarTotal.textContent="Total: "+total
         }else{
             total=0
-            mostrarSubtotal.textContent=""
+            mostrarTotal.textContent=""
         }
     })
 }
@@ -131,3 +139,9 @@ function reiniciar(){
     let cantidadProducto = document.getElementById("cantidadProducto")
     cantidadProducto.value="1"
 }
+let convertidor = document.getElementById("convertidor")
+convertidor.addEventListener("click",function(){
+    let pesos = total
+    let dolares = pesos/3955
+    mostrarTotal.textContent="Total dolares: "+dolares.toFixed(2)
+})

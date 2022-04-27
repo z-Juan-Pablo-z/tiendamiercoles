@@ -74,11 +74,11 @@
     <section>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
-        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+        <h5 id="offcanvasRightLabel">Registrarse</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <form>
+        <form id="formularioRegistro">
           <div class="mb-3">
             <label class="form-label">Email</label>
             <input type="email" class="form-control" id="email">
@@ -156,6 +156,22 @@
     </div>
   </section>
 
+  <section>
+    <!-- Modal -->
+<div class="modal fade" id="mensajeInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="mensajeModalInfo"></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
   <footer class="footer bg-dark text-white text-center py-3">
     <div class="redes ">
       <div>
