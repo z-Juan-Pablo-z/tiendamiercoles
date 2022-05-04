@@ -122,25 +122,30 @@ verCarrito.addEventListener("click",function(){
 
 /*Hacer un subtotal para la muestra del valor*/
 let mostrarTotal =document.getElementById("mostrarTotal")
-let total=0
+let total
 function Total(validar){
+    total = 0 
     carrito.forEach(function(producto){
         if(validar==1){
             total=total+producto.subtotal
             mostrarTotal.textContent="Total: "+total
+            
         }else{
             total=0
             mostrarTotal.textContent=""
         }
     })
+    return total
 }
 
 function reiniciar(){
     let cantidadProducto = document.getElementById("cantidadProducto")
     cantidadProducto.value="1"
 }
+
 let convertidor = document.getElementById("convertidor")
 convertidor.addEventListener("click",function(){
+    //console.log(Total());
     let pesos = total
     let dolares = pesos/3955
     mostrarTotal.textContent="Total dolares: "+dolares.toFixed(2)
